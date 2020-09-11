@@ -1,11 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import {} from 'react-redux';
+import { Provider } from 'react-redux';
+import AppRouter from './routers/AppRouter';
+import store from './store/store';
 
-const App = () => (
-    <div>
-        test
-    </div>
+render(
+    <Provider store={store}><AppRouter /></Provider>,
+    document.getElementById('app')
 );
-
-render(<App />, document.getElementById('app'));
