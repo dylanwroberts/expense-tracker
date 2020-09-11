@@ -1,3 +1,4 @@
+import moment from 'moment';
 import {
     SET_FILTER_TEXT,
     SET_START_DATE,
@@ -6,10 +7,11 @@ import {
     SORT_BY_AMOUNT
 } from '../constants/actionTypes';
 
+//by default, show only expenses this month
 const defaultState = {
     text: '',
-    startDate: undefined,
-    endDate: undefined,
+    startDate: moment().startOf('month'),
+    endDate: moment().endOf('month'),
     sortBy: 'date'
 };
 
