@@ -56,16 +56,18 @@ export default class ExpenseForm extends React.Component {
     }
 
     render() {
-        <div>
-            <h1>Add a new expense</h1>
-            { this.state.error ? <p>{this.state.error}</p> : null }
-            <form>
-                <input type="text" placeholder="description" />
-                <input type="number" placeholder="amount" />
+        return (
+            <div>
+                <h1>Add a new expense</h1>
+                { this.state.error ? <p>{this.state.error}</p> : null }
+                <form>
+                    <input type="text" placeholder="description" />
+                    <input type="number" placeholder="amount" />
             
-                <textarea placeholder="note" />
-                <button>{this.props.buttonText}</button>
-            </form>
-        </div>
+                    <textarea placeholder="note" />
+                    <button>{this.props.buttonText}</button>
+                </form>
+            </div>
+        );
     }
 }
