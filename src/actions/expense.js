@@ -4,9 +4,22 @@ import {
     EDIT_EXPENSE
 } from '../constants/actionTypes';
 
-export const addExpense = expenseObject => ({
+import { v4 as createID } from 'uuid';
+
+export const addExpense = ({
+    description = '',
+    note = '',
+    amount = 0,
+    createdAt = 0
+} = {}) => ({
     type: ADD_EXPENSE,
-    expense: expenseObject
+    expense: {
+        id: createID(),
+        description,
+        note,
+        amount,
+        createdAt
+    }
 });
 
 export const removeExpense = id => ({
