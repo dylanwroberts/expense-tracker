@@ -6,7 +6,7 @@ import {
     SORT_BY_AMOUNT
 } from '../constants/actionTypes';
 
-export const setFilterText = text => ({
+export const setFilterText = (text = '') => ({
     type: SET_FILTER_TEXT,
     text
 });
