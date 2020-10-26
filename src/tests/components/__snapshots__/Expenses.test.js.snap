@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Expenses component with no expenses 1`] = `
+<Fragment>
+  <p>
+    No expenses
+  </p>
+  <div />
+</Fragment>
+`;
+
+exports[`should render the Expenses component with expenses fixture 1`] = `
+<Fragment>
+  <Expense
+    expense={
+      Object {
+        "amount": 195,
+        "createdAt": 0,
+        "description": "Food",
+        "id": "1",
+        "note": "",
+      }
+    }
+    key="Food"
+  />
+  <Expense
+    expense={
+      Object {
+        "amount": 109500,
+        "createdAt": -345600000,
+        "description": "Rent",
+        "id": "2",
+        "note": "",
+      }
+    }
+    key="Rent"
+  />
+  <Expense
+    expense={
+      Object {
+        "amount": 4500,
+        "createdAt": 345600000,
+        "description": "Eggs",
+        "id": "3",
+        "note": "",
+      }
+    }
+    key="Eggs"
+  />
+  <div />
+</Fragment>
+`;

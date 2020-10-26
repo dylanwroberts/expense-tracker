@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render an expense from test data 1`] = `
+<div>
+  <p>
+    Food
+  </p>
+  <p>
+    195
+  </p>
+</div>
+`;

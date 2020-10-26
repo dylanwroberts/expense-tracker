@@ -3,10 +3,19 @@ import Expense from './Expense';
 import { connect } from 'react-redux';
 import getFilteredExpenses from '../selectors/getFilteredExpenses';
 
-const Expenses = props => (
-    <div>
-        {props.expenses.map(expense => <Expense key={expense.description} expense={expense} />)}
-    </div>
+//named export
+export const Expenses = props => (
+    <>
+        {
+            props.expenses.length === 0 ? (
+                <p>No expenses</p>
+            ) : (
+                props.expenses.map(expense => <Expense key={expense.description} expense={expense} />)
+            )
+        }
+        <div>
+        </div>
+    </>
 );
 
 const mapStateToProps = state => ({
