@@ -1,0 +1,1 @@
+//react-test-renderer   -   virtually render components and make assertions about them
